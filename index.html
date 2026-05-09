@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasksmithy — Automation Built for Your Workflow</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --bg-alt: #0f1a2e;
+    --card: #131f35;
+    --text: #c9d6e3;
+    --text-dim: #8899aa;
+    --accent: #4fd1c5;
+    --accent-2: #63b3ed;
+    --border: #1e2d45;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  header {
+    text-align: center;
+    padding: 80px 0 60px;
+    background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { font-size: 2.6rem; font-weight: 800; letter-spacing: -1px; color: #fff; }
+  .tagline { font-size: 1.15rem; color: var(--text-dim); margin-top: 12px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .cta-btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 32px;
+    background: var(--accent);
+    color: #0b1220;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .cta-btn:hover { background: #3bb0a6; }
+  section { padding: 64px 0; }
+  h2 { font-size: 1.7rem; color: #fff; margin-bottom: 32px; text-align: center; }
+  .packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .package {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+  }
+  .package-name { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .package-price { font-size: 1.8rem; font-weight: 800; color: var(--accent); margin-bottom: 16px; }
+  .package ul { list-style: none; margin-bottom: 16px; flex-grow: 1; }
+  .package li { padding: 4px 0; color: var(--text); font-size: 0.95rem; }
+  .package li::before { content: "— "; color: var(--accent-2); }
+  .package .turnaround { font-size: 0.85rem; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 12px; margin-top: auto; }
+  .how-it-works { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
+  .step { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 24px; }
+  .step-num { display: inline-block; width: 36px; height: 36px; line-height: 36px; border-radius: 50%; background: var(--accent); color: #0b1220; font-weight: 800; margin-bottom: 12px; }
+  .step h4 { color: #fff; margin-bottom: 8px; font-size: 1rem; }
+  .step p { color: var(--text-dim); font-size: 0.9rem; }
+  .contact { text-align: center; background: var(--bg-alt); border-top: 1px solid var(--border); }
+  .contact p { color: var(--text-dim); max-width: 480px; margin: 0 auto 24px; }
+  footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); }
+  .trust { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; font-size: 0.85rem; color: var(--text-dim); }
+  .trust span { display: flex; align-items: center; gap: 6px; }
+  @media (max-width: 600px) {
+    header { padding: 60px 0 40px; }
+    .logo { font-size: 2rem; }
+    h2 { font-size: 1.4rem; }
+    .packages, .how-it-works { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">Tasksmithy</div>
+    <div class="tagline">Fixed-price automation builds. No hourly billing, no scope creep, no surprises.</div>
+    <a class="cta-btn" href="https://t.me/BenHermesBot">Start on Telegram</a>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2>Service Packages</h2>
+    <div class="packages">
+      <div class="package">
+        <div class="package-name">The Fix</div>
+        <div class="package-price">$150</div>
+        <ul>
+          <li>One API bridge, webhook fix, or data sync</li>
+          <li>Delivered within 24 hours of kickoff</li>
+          <li>Basic error handling and retry logic</li>
+          <li>15-minute handoff call</li>
+        </ul>
+        <div class="turnaround">Turnaround: 24 hours</div>
+      </div>
+      <div class="package">
+        <div class="package-name">The Build</div>
+        <div class="package-price">$400</div>
+        <ul>
+          <li>Multi-step workflow up to 10 nodes/stages</li>
+          <li>Integration with up to 3 external services</li>
+          <li>30-minute handoff call + written docs</li>
+          <li>14 days of post-delivery bug fixes</li>
+        </ul>
+        <div class="turnaround">Turnaround: 2–3 business days</div>
+      </div>
+      <div class="package">
+        <div class="package-name">The Overhaul</div>
+        <div class="package-price">$800</div>
+        <ul>
+          <li>Architecture review + multi-system integration</li>
+          <li>Up to 5 services with rate-limit handling</li>
+          <li>60-minute architecture walkthrough</li>
+          <li>30 days of post-delivery support</li>
+        </ul>
+        <div class="turnaround">Turnaround: 5–7 business days</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--bg-alt);">
+  <div class="container">
+    <h2>How It Works</h2>
+    <div class="how-it-works">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Describe Your Pain</h4>
+        <p>3–5 sentences is enough. We ask clarifying questions before we quote.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Pick a Package</h4>
+        <p>Most clients start with The Fix to test us. Fixed price, fixed scope.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Pay 50% Upfront</h4>
+        <p>We begin within 24 hours of payment confirmation. No waiting.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Review & Ship</h4>
+        <p>You test it in production. We fix anything that doesn't match spec. Pay balance on delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <h2>Ready to Stop Doing It Manually?</h2>
+    <p>Send us a message on Telegram. Tell us what's broken, slow, or repetitive. We'll reply within the hour with a flat quote.</p>
+    <a class="cta-btn" href="https://t.me/BenHermesBot">Message @BenHermesBot</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="trust">
+      <span>Fixed-price only</span>
+      <span>No hourly billing</span>
+      <span>14–30 day support</span>
+      <span>Delivery-first payment</span>
+    </div>
+    <p style="margin-top:20px; font-size:0.8rem; color:var(--text-dim);">Tasksmithy — We listen to your workflow, then ship a precise solution.</p>
+  </div>
+</footer>
+
+</body>
+</html>
